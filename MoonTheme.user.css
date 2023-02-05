@@ -1,0 +1,156 @@
+/* ==UserStyle==
+@name           `Moon Theme
+@author         sapondanaisriwan <sapondanaisriwan@gmail.com> (https://github.com/sapondanaisriwan)
+@namespace      https://userstyles.world/user/sapondanaisriwan
+@homepageURL    https://github.com/sapondanaisriwan/ImprovedUSw
+@supportURL     https://github.com/sapondanaisriwan/ImprovedUSw/issues
+@version        1.0.0
+@preprocessor   stylus
+==/UserStyle== */
+
+/* 
+Support me: https://ko-fi.com/sapondanaisriwan
+Support me: https://ko-fi.com/sapondanaisriwan
+Support me: https://ko-fi.com/sapondanaisriwan
+*/
+@-moz-document url-prefix("moz-extension://"),
+url-prefix("chrome-extension://") {
+
+
+    /* Variables */
+    i=!important;
+
+    :root {
+        --main-bg1: #282c34;
+        --activeline-bg: #2f323b;
+        --bg2-navbar: #21252b;
+        --comment-color: #676E95;
+
+        --text-color2: #8E9097;
+        --text-color3: #676E79;
+        --title-color: #9DA5B3;
+        --selection-color: #394e75;
+
+        --id: #FF9070;
+        --class: #98C379;
+        --element: #E06C75;
+        --font: #ff9070
+    }
+
+
+    input,
+    select,
+    button {
+        border-radius: 6px i;
+    }
+
+    #save-button {
+        border-radius: 6px 0 0 6px i;
+    }
+    
+    [menu-tpl="Save as template"] {
+        border-radius: 0 6px 6px 0 i;
+    }
+    
+    body {
+        background-color: var(--bg2-navbar) i;
+    }
+
+    /* Selection */
+    .CodeMirror-selected,
+    .CodeMirror-focused .CodeMirror-selected,
+    .CodeMirror-line::selection,
+    .CodeMirror-line > span::selection,
+    .CodeMirror-line > span > span::selection {
+        background: var(--selection-color) i;
+    }
+
+    .CodeMirror-gutters,
+    .CodeMirror {
+        border: none i;
+        background-color: var(--main-bg1) i;
+    }
+
+    /* Select line */
+    .CodeMirror-activeline-background {
+        background: var(--activeline-bg) i;
+    }
+
+    .CodeMirror-activeline > .CodeMirror-gutter-wrapper.CodeMirror-activeline-gutter > div {
+        color: var(--title-color) i;
+    }
+
+
+    .applies-to {
+        border: none;
+        background-color: var(--bg2-navbar) i;
+    }
+
+    /* Removes vertical line */
+    #header-resizer {
+        border: none i;
+    }
+
+    #header {
+        box-shadow: none i;
+    }
+
+    #header-resizer::after {
+        border-right: none i;
+    }
+
+    .CodeMirror-linenumber,
+    .cm-s-default .cm-comment,
+    .cm-s-default .cm-variable-2 {
+        color: var(--comment-color) i;
+    }
+
+    #details-wrapper {
+        color: var(--text-color2) i;
+    }
+
+    h2 {
+        color: var(--title-color) i;
+    }
+
+    /* Colors for selector */
+    /* #id */
+    .cm-builtin,
+    .cm-link {
+        color: var(--id) i;
+    }
+
+    /* .class */
+    .cm-qualifier {
+        color: var(--class) i;
+    }
+
+    /* Element */
+    .cm-def,
+    .cm-header,
+    .cm-tag,
+    .cm-type {
+        color: var(--element) i;
+    }
+
+    .cm-s-default .cm-variable,
+    .cm-s-default .cm-punctuation,
+    .cm-s-default .cm-property,
+    .cm-s-default .cm-operator,
+    .cm-s-default .cm-variable-2 {
+
+        color: #8a97c3 i;
+    }
+
+    .cm-s-default .cm-atom {
+        color: rgb(161, 247, 181) i;
+    }
+
+    .cm-s-default .cm-number {
+        color: #ff9070 i;
+    }
+
+    .cm-s-default .cm-variable-2 {
+        color: #a4dbe4;
+    }
+}
